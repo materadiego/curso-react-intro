@@ -1,0 +1,30 @@
+.ModalBg {
+  width: 95%;
+  height: 80vw;
+  bottom: 0;
+  left: 2.5%;
+  background: rgba(255, 255, 255, 0.06);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  box-shadow: 0 2px 30px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(12.5px);
+  -webkit-backdrop-filter: blur(12.5px);
+  border-top: 1px solid #2286b2;
+  border-left: 1px solid #2286b2;
+  border-right: 1px solid #2286b2;
+  z-index: 3;
+  transition: 0.8s;
+  will-change: transform;
+}
+
+.ModalBg--Opened {
+  transform: translateY(0);
+}
+
+.ModalBg--Closed {
+  transform: translateY(85vw);
+}

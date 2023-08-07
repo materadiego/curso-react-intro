@@ -1,0 +1,57 @@
+.LoadingCard {
+  border-radius: 8px;
+  backdrop-filter: blur(6.4px);
+  -webkit-backdrop-filter: blur(6.4px);
+  display: flex;
+  align-items: center;
+  margin: 7vw 0;
+  position: relative;
+  opacity: 1;
+  height: 12.5vw;
+  background: linear-gradient(
+    270deg,
+    rgba(8, 17, 21, 0.5),
+    rgba(4, 8, 10, 0.5)
+  );
+  background-size: 400% 400%;
+
+  animation: loadingAnimation 2s ease-in-out infinite;
+}
+
+.LoadingIcon {
+  width: 8vw;
+  height: 8vw;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50vw;
+  border-top: 2px solid #089389;
+  border-right: 2px solid #089389;
+  border-bottom: 2px solid #089389;
+  left: 3vw;
+  animation: loadingIconAnimation 2s linear infinite;
+}
+
+@keyframes loadingAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes loadingIconAnimation {
+  0% {
+    transform: rotateZ(0);
+  }
+  50% {
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}

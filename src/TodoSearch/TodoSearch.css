@@ -1,0 +1,26 @@
+.SearchContainer {
+  width: 90%;
+  margin: 4vw auto 2vw;
+  position: relative;
+  z-index: 2;
+  /* border-bottom: 2px solid #ddd; */
+}
+
+.SearchContainer input {
+  width: 87%;
+  outline: none;
+  padding: 5vw;
+  font-size: 20px;
+  color: #ffffff;
+
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  box-shadow: 0 2px 30px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(12.5px);
+  -webkit-backdrop-filter: blur(12.5px);
+  border: 1px solid rgba(255, 255, 255, 1);
+}
+
+.SearchContainer input::placeholder {
+  color: #ddd;
+}

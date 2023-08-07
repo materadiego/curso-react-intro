@@ -1,0 +1,121 @@
+.AddButton {
+  position: fixed;
+  bottom: 5vw;
+  right: 5vw;
+  z-index: 2;
+  width: 15vw;
+  height: 15vw;
+  border-radius: 50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  background-color: #35b8f1;
+  border: 3px solid #35b8f1;
+}
+
+.AddButton img {
+  width: 100%;
+  border-radius: 50vw;
+  position: relative;
+  z-index: 2;
+}
+
+.AddButton-Animation {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 100vw;
+  z-index: 1;
+  border: 2px solid #35b8f1;
+  transform: scale(0.7);
+  will-change: transform opacity;
+}
+
+.AddButton-Animation--1 {
+  animation-name: addButtonAnimation2;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+.AddButton-Animation--2 {
+  animation-name: addButtonAnimation2;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-delay: 1s;
+}
+.AddButtonStatic {
+  opacity: 0;
+}
+
+.ButtonLoading {
+  position: fixed;
+  bottom: 5vw;
+  right: 5vw;
+  z-index: 2;
+  width: 15vw;
+  height: 15vw;
+  border-radius: 50vw;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  border-top: 3px solid #35b8f1;
+  border-bottom: 3px solid #35b8f1;
+  border-right: 3px solid #35b8f1;
+
+  will-change: transform;
+  animation: loadingButtonAnimation 2s linear infinite;
+}
+
+@keyframes loadingButtonAnimation {
+  0% {
+    transform: rotateZ(0);
+  }
+  50% {
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes addButtonAnimation1 {
+  0% {
+    opacity: 0;
+  }
+
+  2% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes addButtonAnimation2 {
+  0% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+
+  32% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+
+  73% {
+    opacity: 0.6;
+  }
+
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}

@@ -1,0 +1,36 @@
+.Card {
+  /* From https://css.glass */
+  border-radius: 8px;
+  backdrop-filter: blur(6.4px);
+  -webkit-backdrop-filter: blur(6.4px);
+  display: flex;
+  align-items: center;
+  margin: 7vw 0;
+  padding: 3vw 0;
+  position: relative;
+  opacity: 1;
+}
+
+.Card--Done {
+  background: rgba(0, 7, 11, 0.455);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+}
+
+.Card--Undone {
+  background: rgba(20, 40, 50, 0.5);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+}
+
+.CardText {
+  width: 65%;
+  font-weight: 300;
+  font-size: 14px;
+  margin: 0 auto;
+  text-transform: capitalize;
+  font-family: "Poppins", sans-serif;
+}
+
+.CardText--Done {
+  opacity: 0.5;
+  text-decoration: line-through;
+}

@@ -1,0 +1,24 @@
+/* Fonts
+font-family: 'Abel', sans-serif;
+font-family: 'Cairo', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Quicksand', sans-serif; */
+
+* {
+  font-family: "Quicksand", sans-serif;
+}
+
+.ListMessage {
+  font-size: 26px;
+  margin-top: 15vw;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  font-weight: 400;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+  border: 2px solid #2286b2;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  padding: 3vw 0;
+}
