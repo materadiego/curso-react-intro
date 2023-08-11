@@ -6,6 +6,7 @@
   position: relative;
   box-shadow: 0 2px 30px rgba(0, 0, 0, 0.5);
   border-radius: 8px;
+  border: 2px solid #ffffff;
 }
 
 .SearchContainer input,
@@ -21,10 +22,8 @@
   padding: 3vw 5vw;
   font-size: 20px;
   color: #ffffff;
-  border-top: 1px solid rgba(255, 255, 255, 1);
-  border-left: 1px solid rgba(255, 255, 255, 1);
-  border-bottom: 1px solid rgba(255, 255, 255, 1);
-  border-right: none;
+  border: none;
+
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
   backdrop-filter: blur(15.5px);
@@ -42,9 +41,7 @@
   align-items: center;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
-  border-top: 1px solid rgba(255, 255, 255, 1);
-  border-right: 1px solid rgba(255, 255, 255, 1);
-  border-bottom: 1px solid rgba(255, 255, 255, 1);
+  border: none;
 }
 
 .SearchImageContainer img {
