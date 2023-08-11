@@ -1,10 +1,7 @@
 .TodoCounterContainer {
-  padding: 5vw 0;
+  padding: 5vw 0 3vw;
   position: relative;
-  background: rgba(4, 22, 22, 0.8);
-  backdrop-filter: blur(6.4px);
-
-  border-bottom: 2px solid #0a91af;
+  background: transparent;
 }
 
 h1,
@@ -22,28 +19,36 @@ h1 {
 }
 
 h1 img {
-  width: 14vw;
-  margin-right: 2vw;
+  width: 50px;
+  margin-right: 6px;
   transform: rotateZ(45deg);
 }
 
 h2 {
   width: 87%;
-  color: #cccccc;
-  margin: 2vw auto;
+  color: #ffffff;
+  margin: 0vw auto 2vw;
   font-size: 18px;
   font-weight: 400;
 }
 
 h2 span {
   width: 87%;
-  color: #ffffff;
-
+  color: #aaaaaa;
   font-size: 20px;
   font-weight: 500;
 }
 
-/* h2 img {
-  width: 8vw;
-  margin-right: 2vw;
-} */
+@media screen and (min-width: 1099px) {
+  .TodoCounterContainer {
+    width: 40%;
+    margin-left: 10%;
+    padding: 3vw 0 1vw;
+  }
+
+  h1 {
+  }
+  h2 {
+    margin: 0 auto;
+  }
+}

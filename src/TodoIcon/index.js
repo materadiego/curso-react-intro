@@ -11,9 +11,9 @@ const iconTypes = {
 function TodoIcon({ type, completed, onClick }) {
   return (
     <span
-      className={`CardIconContainer CardIconContainer${type}  ${
+      className={`CardIconContainer CardIconContainer${type}   ${
         completed ? "CardCheck--Done" : "CardCheck--Undone"
-      }`}
+      } `}
       onClick={onClick}
     >
       {iconTypes[type]}

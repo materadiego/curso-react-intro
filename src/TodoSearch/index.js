@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import searchImage from "./search.png";
 import "./TodoSearch.css";
 import { TodoContext } from "../TodoContext";
 
@@ -11,6 +12,9 @@ function TodoSearch() {
         onChange={(event) => setSearchValue(event.target.value)}
         placeholder="Search task"
       />
+      <div className="SearchImageContainer">
+        <img src={searchImage} alt="Search"></img>
+      </div>
     </section>
   );
 }

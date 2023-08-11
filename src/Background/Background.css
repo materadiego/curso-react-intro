@@ -10,13 +10,25 @@
   height: 100vh;
   top: 0;
   left: 0;
-  background: #261e67;
+  background: rgb(101, 31, 158);
+  background: linear-gradient(
+    321deg,
+    rgba(101, 31, 158, 1) 5%,
+    rgba(38, 30, 103, 1) 58%
+  );
+  background: rgb(101, 31, 158);
+  background: linear-gradient(
+    321deg,
+    rgba(101, 31, 158, 1) 5%,
+    rgba(38, 30, 103, 1) 58%,
+    rgb(24, 19, 61) 80%
+  );
   overflow: hidden;
 }
 
 .background span {
-  width: 6vmin;
-  height: 6vmin;
+  width: 4vmin;
+  height: 4vmin;
   border-radius: 6vmin;
   backface-visibility: hidden;
   position: absolute;
@@ -201,4 +213,11 @@
   color: #387ab7;
   top: 35%;
   left: 95%;
+}
+
+@media screen and (min-width: 1099px) {
+  .background span {
+    width: 3vmin;
+    height: 3vmin;
+  }
 }

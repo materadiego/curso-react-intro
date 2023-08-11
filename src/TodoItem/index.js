@@ -7,14 +7,7 @@ function TodoItem(props) {
   return (
     <li className={`Card ${props.completed ? "Card--Done" : "Card--Undone"}`}>
       <CompleteIcon completed={props.completed} onComplete={props.onComplete} />
-      {/* <span
-        onClick={props.onComplete}
-        className={`CardCheck ${
-          props.completed ? "CardCheck--Done" : "CardCheck--Todo"
-        }`}
-      >
-        <img src={check} alt="check"></img>
-      </span> */}
+      <div className={`CardPriority CardPriority${props.priority}`}> </div>
       <p
         className={`CardText  ${
           props.completed ? "CardText--Done" : "CardText--Todo"
@@ -22,10 +15,8 @@ function TodoItem(props) {
       >
         {props.text}
       </p>
+
       <DeleteIcon onDelete={props.onDelete} />
-      {/* <span className="CardDelete" onClick={props.onDelete}>
-        <img src={errase} alt="errase"></img>
-      </span> */}
     </li>
   );
 }

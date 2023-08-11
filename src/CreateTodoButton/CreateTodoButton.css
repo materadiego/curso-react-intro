@@ -1,6 +1,6 @@
 .AddButton {
   position: fixed;
-  bottom: 5vw;
+  bottom: 8vw;
   right: 5vw;
   z-index: 2;
   width: 15vw;
@@ -117,5 +117,11 @@
   100% {
     transform: scale(1.5);
     opacity: 0;
+  }
+}
+
+@media screen and (min-width: 1099px) {
+  .AddButton {
+    display: none;
   }
 }

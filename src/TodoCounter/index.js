@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import Icon1 from "./HeroIcon.png";
-import Icon2 from "./TaskIcon.png";
 import "./TodoCounter.css";
 import { TodoContext } from "../TodoContext";
 

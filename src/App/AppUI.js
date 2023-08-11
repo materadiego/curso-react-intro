@@ -45,6 +45,7 @@ function AppUI() {
             text={todo.text}
             key={todo.text}
             completed={todo.completed}
+            priority={todo.priority}
           />
         ))}
       </TodoList>

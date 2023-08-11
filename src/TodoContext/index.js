@@ -22,17 +22,31 @@ function TodoProvider({ children }) {
     return taskText.includes(searchText);
   });
 
-  const addTask = (text) => {
-    saveTasks(text);
+  const addTask = (text, priority, priorityNumber) => {
+    saveTasks(text, priority, priorityNumber);
     const newTasks = [...tasks];
-    newTasks.push({ text, completed: false });
-    saveTasks(newTasks);
+    newTasks.push({ text, priority, priorityNumber, completed: false });
+    const sortedNewTasks = newTasks.sort(function (a, b) {
+      if (a.priorityNumber > b.priorityNumber) {
+        return 1;
+      }
+      if (a.priorityNumber < b.priorityNumber) {
+        return -1;
+      }
+      // a must be equal to b
+      return 0;
+    });
+    saveTasks(sortedNewTasks);
   };
 
   const completeTask = (text) => {
     const newTasks = [...tasks];
     const taskIndex = newTasks.findIndex((task) => task.text === text);
-    newTasks[taskIndex].completed = true;
+    if (newTasks[taskIndex].completed === false) {
+      newTasks[taskIndex].completed = true;
+    } else {
+      newTasks[taskIndex].completed = false;
+    }
     saveTasks(newTasks);
   };
 

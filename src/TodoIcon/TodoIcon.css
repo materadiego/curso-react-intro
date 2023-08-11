@@ -15,6 +15,7 @@
 
 .CardCheck--Done {
   background-color: #089389;
+  border: 2px solid #089389;
 }
 
 .CardCheck--Undone {
@@ -35,4 +36,50 @@
 .Icon-svg--Delete {
   width: 7vw;
   height: 7vw;
+}
+
+@media screen and (min-width: 1099px) {
+  .CardIconContainer {
+    width: 2vw;
+    height: 2vw;
+    cursor: pointer;
+  }
+
+  .CardIconContainerCheck {
+    left: 1vw;
+    border: 2px solid #089389;
+  }
+
+  .CardCheck--Done {
+    background-color: #089389;
+  }
+
+  .CardCheck--Undone {
+    background-color: transparent;
+  }
+
+  .CardIconContainerDelete {
+    right: 1vw;
+  }
+
+  .CardCheck--Done .Icon-svg--Check {
+    opacity: 1;
+  }
+
+  .Icon-svg--Check {
+    width: 1.1vw;
+    height: 1.1vw;
+  }
+
+  .Icon-svg--Check,
+  .Icon-svg--Delete {
+    opacity: 0.4;
+    transition: 0.2s;
+    will-change: opacity;
+  }
+
+  .Icon-svg--Check:hover,
+  .Icon-svg--Delete:hover {
+    opacity: 1;
+  }
 }
