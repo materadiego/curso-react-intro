@@ -7,14 +7,3 @@ font-family: 'Quicksand', sans-serif; */
 * {
   font-family: "Quicksand", sans-serif;
 }
-
-body::-webkit-scrollbar {
-  background-color: #222;
-  width: 10px;
-}
-
-body::-webkit-scrollbar-thumb {
-  background-color: #20728e;
-  border-radius: 50vw;
-  box-shadow: inset 0 0 3px 1px rgba(0, 0, 0, 0.7);
-}

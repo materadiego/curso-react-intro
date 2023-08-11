@@ -34,7 +34,6 @@ h2 {
 
 h2 span {
   width: 87%;
-  color: #aaaaaa;
   font-size: 20px;
   font-weight: 500;
 }
@@ -42,8 +41,9 @@ h2 span {
 @media screen and (min-width: 1099px) {
   .TodoCounterContainer {
     width: 40%;
-    margin-left: 10%;
-    padding: 3vw 0 1vw;
+    height: 7vw;
+    margin: 2vw 0 0 10%;
+    padding: 0;
   }
 
   h1 {

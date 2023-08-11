@@ -45,6 +45,7 @@ function TodoForm() {
         placeholder="Take a nap.."
       />
       <div className="TodoForm-PriorityContainer">
+        <label className="TodoForm-PriorityLabel">Priority</label>
         <input
           type="button"
           value="Low"

@@ -5,7 +5,11 @@ import "./TodoItem.css";
 
 function TodoItem(props) {
   return (
-    <li className={`Card ${props.completed ? "Card--Done" : "Card--Undone"}`}>
+    <li
+      className={`Card ${
+        props.completed ? `Card--Done` : `Card--Undone${props.priority}`
+      }`}
+    >
       <CompleteIcon completed={props.completed} onComplete={props.onComplete} />
       <div className={`CardPriority CardPriority${props.priority}`}> </div>
       <p

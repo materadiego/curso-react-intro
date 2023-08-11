@@ -15,9 +15,19 @@
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
 }
 
-.Card--Undone {
+.Card--UndoneLow {
+  box-shadow: 0 0 5px 1px rgba(0, 255, 183, 0.638);
   background: rgba(20, 40, 50, 0.5);
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+}
+
+.Card--UndoneMedium {
+  box-shadow: 0 0 5px 1px rgba(0, 213, 255, 0.6);
+  background: rgba(20, 40, 50, 0.5);
+}
+
+.Card--UndoneHigh {
+  box-shadow: 0 0 5px 1px rgba(242, 0, 255, 0.6);
+  background: rgba(20, 40, 50, 0.5);
 }
 
 .CardPriority {
@@ -32,13 +42,13 @@
 }
 
 .CardPriorityLow {
-  background: #008cff;
+  background: #00ff9d;
 }
 .CardPriorityMedium {
   background: #00d5ff;
 }
 .CardPriorityHigh {
-  background: #bb00ff;
+  background: rgb(187, 0, 255);
 }
 
 .CardText {
@@ -51,23 +61,29 @@
 }
 
 .CardText--Done {
-  opacity: 0.5;
-  text-decoration: line-through;
+  opacity: 0.4;
 }
 
 @media screen and (min-width: 1099px) {
   .Card {
-    width: 100%;
-    margin: 1vw 0;
+    width: 88%;
+    margin: 1vw 0 0 6%;
     padding: 1vw 0;
   }
 
-  .Card--Done {
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+  .Card--UndoneLow {
+    box-shadow: 0 0 5px 1px rgba(0, 255, 183, 0.638);
+    background: rgba(20, 40, 50, 0.5);
   }
 
-  .Card--Undone {
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+  .Card--UndoneMedium {
+    box-shadow: 0 0 5px 1px rgba(0, 213, 255, 0.6);
+    background: rgba(20, 40, 50, 0.5);
+  }
+
+  .Card--UndoneHigh {
+    box-shadow: 0 0 5px 1px rgba(242, 0, 255, 0.6);
+    background: rgba(20, 40, 50, 0.5);
   }
 
   .CardPriority {
@@ -83,6 +99,6 @@
 
   .CardText {
     width: 72%;
-    font-size: 14px;
+    font-size: 16px;
   }
 }

@@ -54,13 +54,14 @@
 @media screen and (min-width: 1099px) {
   .SearchContainer {
     width: 30%;
+    height: 4vw;
     margin: 0 0 2vw 12%;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
   }
 
   .SearchContainer input {
     width: 90%;
-    padding: 0.5vw 1vw;
+    padding: 0vw 1vw;
   }
 
   .SearchImageContainer {

@@ -55,3 +55,18 @@
     transform: rotateZ(360deg);
   }
 }
+
+@media screen and (min-width: 1099px) {
+  .LoadingCard {
+    width: 94%;
+    height: 3.5vw;
+    margin: 1vw 0;
+  }
+
+  .LoadingIcon {
+    width: 2vw;
+    height: 2vw;
+
+    left: 1vw;
+  }
+}
