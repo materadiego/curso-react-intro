@@ -1,5 +1,5 @@
 .TodoCounterContainer {
-  padding: 5vw 0 3vw;
+  height: 32vw;
   position: relative;
   background: transparent;
 }
@@ -12,6 +12,7 @@ h3 {
 
 h1 {
   width: 90%;
+  margin-top: 3vw;
   font-size: 26px;
   display: flex;
   align-items: center;

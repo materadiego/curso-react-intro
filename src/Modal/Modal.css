@@ -1,6 +1,6 @@
 .ModalBg {
   width: auto;
-  height: 100vw;
+  height: calc(100vh - 33vw);
   bottom: 0;
   border-top: 3px solid #0a91af;
   background: rgb(101, 31, 158);
@@ -23,20 +23,20 @@
 }
 
 .ModalBg--Closed {
-  transform: translateY(108vw);
+  transform: translateY(180vw);
 }
 
 @media screen and (min-width: 1099px) {
   .ModalBg {
     width: 30%;
-    height: 22vw;
+    height: 32vw;
     bottom: auto;
     top: 5vw;
     left: 60%;
     padding: 2vw 0 0;
     border: none;
     border-radius: 8px;
-    background: rgba(38, 30, 103, 1);
+    /* background: rgba(38, 30, 103, 1); */
     box-shadow: 0 2px 30px 7px rgba(0, 0, 0, 0.4),
       inset 0 0 10px 1px rgba(0, 0, 0, 0.4);
   }
