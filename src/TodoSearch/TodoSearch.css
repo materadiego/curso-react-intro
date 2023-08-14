@@ -20,7 +20,7 @@
   width: 75%;
   outline: none;
   padding: 3vw 5vw;
-  font-size: 20px;
+  font-size: 5vw;
   color: #ffffff;
   border: none;
 
@@ -45,20 +45,21 @@
 }
 
 .SearchImageContainer img {
-  width: 55%;
+  width: 40%;
 }
 
 @media screen and (min-width: 1099px) {
   .SearchContainer {
-    width: 30%;
+    width: 35%;
     height: 4vw;
-    margin: 0 0 2vw 12%;
+    margin: 0 0 2vw 10%;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
   }
 
   .SearchContainer input {
     width: 90%;
     padding: 0vw 1vw;
+    font-size: 1.3vw;
   }
 
   .SearchImageContainer {

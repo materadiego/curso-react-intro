@@ -6,13 +6,24 @@
 }
 
 .TodoFormIconContainer {
-  display: none;
+  width: 30vw;
+  height: 30vw;
+  margin: 5vw 0;
+  border-radius: 50vw;
+  display: flex;
+  justify-content: center;
+  border: 2px solid #00d5ff;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+.TodoFormIcon {
+  width: 60%;
 }
 
 .TodoForm-Label {
   width: 90%;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 6.25vw;
   color: #ffffff;
 }
 
@@ -21,7 +32,7 @@
   height: 25vw;
   margin: 3vw 0 5vw;
   padding: 3vw 5vw;
-  font-size: 18px;
+  font-size: 5.625vw;
   resize: none;
   background-color: transparent;
   outline: none;
@@ -55,7 +66,7 @@
   width: 100%;
   color: #ffffff;
   margin: 0 0 0.7vw;
-  font-size: 20px;
+  font-size: 6.25vw;
   font-weight: 600;
 }
 
@@ -114,10 +125,6 @@
   background: rgb(20, 120, 153);
 }
 
-.ArrowAnimationContainer {
-  display: none;
-}
-
 @media screen and (min-width: 1099px) {
   .TodoForm {
     padding: 0 2vw;
@@ -128,19 +135,11 @@
     width: 5vw;
     height: 5vw;
     margin: 0 0 1vw;
-    border-radius: 50vw;
-    display: flex;
-    justify-content: center;
-    border: 2px solid #00d5ff;
-    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
-  }
-
-  .TodoFormIcon {
-    width: 60%;
   }
 
   .TodoForm-Label {
     width: 100%;
+    font-size: 1.2vw;
   }
 
   .TodoForm-Text {
@@ -148,6 +147,7 @@
     height: 5vw;
     margin: 1vw 0 1vw;
     padding: 1vw;
+    font-size: 1vw;
   }
 
   .TodoForm-PriorityContainer {
@@ -157,7 +157,7 @@
 
   .TodoForm-PriorityLabel {
     margin: 0 0 1vw;
-    font-size: 20px;
+    font-size: 1.2vw;
   }
 
   .TodoForm-PriorityButton {
@@ -189,50 +189,5 @@
 
   .TodoForm-Button--Back {
     display: none;
-  }
-
-  .ArrowAnimationContainer {
-    width: 5vw;
-    height: 5vw;
-    top: 24.5vw;
-    left: 9vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-  }
-
-  .ArrowAnimationContainer img {
-    will-change: opacity;
-    width: 4vw;
-    position: absolute;
-    animation-name: arrowAnimation;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-  }
-
-  @keyframes arrowAnimation {
-    0% {
-      transform: translateX(-1vw);
-      opacity: 0;
-    }
-    10% {
-      opacity: 0;
-    }
-    30% {
-      opacity: 1;
-    }
-
-    70% {
-      opacity: 1;
-    }
-    90% {
-      opacity: 0;
-    }
-    100% {
-      transform: translateX(1vw);
-      opacity: 0;
-    }
   }
 }

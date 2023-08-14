@@ -1,6 +1,6 @@
 .CardIconContainer {
-  width: 8vw;
-  height: 8vw;
+  width: 7vw;
+  height: 7vw;
   position: absolute;
   display: flex;
   align-items: center;
@@ -24,7 +24,12 @@
 
 .CardIconContainerDelete {
   position: absolute;
-  right: 2vw;
+  background-color: rgba(255, 255, 255, 0.0974);
+  box-shadow: 0 0 12px 1px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(12.5px);
+  -webkit-backdrop-filter: blur(12.5px);
+  top: -2vw;
+  right: -2vw;
   transform: rotateZ(45deg);
 }
 
@@ -60,6 +65,8 @@
 
   .CardIconContainerDelete {
     right: 1vw;
+    top: auto;
+    box-shadow: none;
   }
 
   .CardCheck--Done .Icon-svg--Check {

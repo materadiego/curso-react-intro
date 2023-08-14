@@ -1,0 +1,66 @@
+.EditionButtons {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 7vw;
+  height: 7vw;
+  border-radius: 50vw;
+  z-index: 2;
+}
+
+.EditionButtons--Open,
+.EditionButtons--Close {
+  left: -3.5vw;
+  top: -3.5vw;
+}
+
+.EditionButtons--Submit {
+  left: 4vw;
+}
+
+.EditionButtons-ImageOpen {
+  width: 80%;
+}
+
+.EditionButtons-ImageClose {
+  width: 80%;
+}
+
+.EditionButtons-ImageSubmit {
+  width: 100%;
+}
+
+@media screen and (min-width: 1099px) {
+  .EditionButtons {
+    width: 2vw;
+    height: 2vw;
+    opacity: 0.5;
+    transition: 0.3s;
+    will-change: opacity;
+    cursor: pointer;
+  }
+
+  .EditionButtons:hover {
+    opacity: 1;
+  }
+
+  .EditionButtons--Open,
+  .EditionButtons--Close {
+    left: auto;
+    right: 3vw;
+    top: auto;
+  }
+
+  .EditionButtons--Submit {
+    left: 1.1vw;
+  }
+
+  .EditionButtons-ImageOpen {
+    width: 60%;
+  }
+
+  .EditionButtons-ImageClose {
+    width: 70%;
+  }
+}

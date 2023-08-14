@@ -10,6 +10,7 @@ function TodoProvider({ children }) {
     error,
   } = useLocalStorage("MyTasksApp_v1", []);
   const [searchValue, setSearchValue] = useState("");
+  const [createdValue, setCreatedValue] = useState("");
   const [openModal, setOpenModal] = useState(false);
   const [emptyList, setEmptyList] = useState(true);
 
@@ -21,6 +22,17 @@ function TodoProvider({ children }) {
     const searchText = searchValue.toLocaleLowerCase();
     return taskText.includes(searchText);
   });
+
+  const createdTask = (newKey) => {
+    let created;
+    const textIndex = tasks.findIndex((task) => task.text === newKey);
+    if (textIndex === -1) {
+      created = false;
+    } else {
+      created = true;
+    }
+    return created;
+  };
 
   const addTask = (text, priority, priorityNumber) => {
     saveTasks(text, priority, priorityNumber);
@@ -57,6 +69,13 @@ function TodoProvider({ children }) {
     saveTasks(newTasks);
   };
 
+  const editTask = (key, newKey) => {
+    const newTasks = [...tasks];
+    const taskToEditIndex = newTasks.findIndex((task) => task.text === key);
+    newTasks[taskToEditIndex].text = newKey;
+    saveTasks(newTasks);
+  };
+
   useEffect(() => {
     if (tasks.length === 0) {
       setEmptyList(true);
@@ -69,6 +88,7 @@ function TodoProvider({ children }) {
       value={{
         loading,
         error,
+        createdTask,
         completedTasks,
         totalTasks,
         searchValue,
@@ -77,6 +97,7 @@ function TodoProvider({ children }) {
         searchedTasks,
         completeTask,
         deleteTask,
+        editTask,
         openModal,
         setOpenModal,
         addTask,

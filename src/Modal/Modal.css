@@ -1,15 +1,13 @@
 .ModalBg {
   width: auto;
-  height: calc(100vh - 33vw);
+  height: calc(100vh);
   bottom: 0;
-  border-top: 3px solid #0a91af;
   background: rgb(101, 31, 158);
   background: linear-gradient(130deg, rgb(77, 41, 106) 8%, rgb(29, 22, 77) 55%);
   position: fixed;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  box-shadow: 0 2px 20px 5px rgba(0, 0, 0, 1);
   backdrop-filter: blur(12.5px);
   -webkit-backdrop-filter: blur(12.5px);
 
@@ -23,7 +21,7 @@
 }
 
 .ModalBg--Closed {
-  transform: translateY(180vw);
+  transform: translateY(105vh);
 }
 
 @media screen and (min-width: 1099px) {

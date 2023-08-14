@@ -17,10 +17,12 @@ function AppUI() {
   const {
     loading,
     error,
+    createdTask,
     emptyList,
     searchedTasks,
     completeTask,
     deleteTask,
+    editTask,
     openModal,
     setOpenModal,
   } = useContext(TodoContext);
@@ -42,6 +44,8 @@ function AppUI() {
           <TodoItem
             onComplete={() => completeTask(todo.text)}
             onDelete={() => deleteTask(todo.text)}
+            onEdit={editTask}
+            createdTask={createdTask}
             text={todo.text}
             key={todo.text}
             completed={todo.completed}

@@ -13,15 +13,15 @@ h3 {
 h1 {
   width: 90%;
   margin-top: 3vw;
-  font-size: 26px;
+  font-size: 8.125vw;
   display: flex;
   align-items: center;
   color: #ffffff;
 }
 
 h1 img {
-  width: 50px;
-  margin-right: 6px;
+  width: 15.625vw;
+  margin-right: 2vw;
   transform: rotateZ(45deg);
 }
 
@@ -29,27 +29,40 @@ h2 {
   width: 87%;
   color: #ffffff;
   margin: 0vw auto 2vw;
-  font-size: 18px;
+  font-size: 5.625vw;
   font-weight: 400;
 }
 
 h2 span {
   width: 87%;
-  font-size: 20px;
+  font-size: 6.25vw;
   font-weight: 500;
 }
 
 @media screen and (min-width: 1099px) {
   .TodoCounterContainer {
-    width: 40%;
+    width: 35%;
     height: 7vw;
     margin: 2vw 0 0 10%;
     padding: 0;
   }
 
   h1 {
+    font-size: 2vw;
+    margin: 0;
+  }
+
+  h1 img {
+    width: 4vw;
+    margin-right: 0.5vw;
   }
   h2 {
-    margin: 0 auto;
+    font-size: 1.3vw;
+    margin: 0;
+  }
+  h2 span {
+    width: 87%;
+    font-size: 1.3vw;
+    font-weight: 500;
   }
 }

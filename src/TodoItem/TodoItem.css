@@ -4,15 +4,30 @@
   -webkit-backdrop-filter: blur(6.4px);
   display: flex;
   align-items: center;
-  margin: 7vw 0;
   padding: 3vw 0;
   position: relative;
   opacity: 1;
+  transition: 0.3s;
+  will-change: margin;
+}
+
+.Card--Undone {
+  background: rgba(20, 40, 50, 0.5);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
 }
 
 .Card--Done {
   background: rgba(0, 7, 11, 0.455);
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 0 2px rgba(8, 147, 137, 0.8),
+    inset 0 0 14px rgba(8, 147, 137, 1);
+}
+
+.Card--Editable {
+  margin: 11vw 0;
+}
+
+.Card--Uneditable {
+  margin: 7vw 0;
 }
 
 .Card--UndoneLow {
@@ -33,12 +48,16 @@
 .CardPriority {
   width: 4vw;
   height: 4vw;
-  margin: 0 2.5vw 0 14.5vw;
+  margin: 0;
+  bottom: -1vw;
+  right: -1vw;
   border-radius: 50vw;
-  display: flex;
+  position: absolute;
+  display: none;
   align-items: center;
   justify-content: center;
-  box-shadow: inset 0 0 4px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.7),
+    inset 0 0 4px 1px rgba(0, 0, 0, 0.5);
 }
 
 .CardPriorityLow {
@@ -52,23 +71,39 @@
 }
 
 .CardText {
-  width: 62%;
+  width: 75%;
+  padding: 1vw 2vw;
   font-weight: 300;
-  font-size: 14px;
-  margin: 0;
+  font-size: 4.375vw;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  margin: 0 0 0 12vw;
+  color: #ffffff;
   text-transform: capitalize;
   font-family: "Poppins", sans-serif;
 }
 
 .CardText--Done {
-  opacity: 0.8;
+  opacity: 0.7;
+}
+
+.CardText--Uneditable {
+  background: transparent;
+}
+.CardText--Editable {
+  background-color: rgba(255, 255, 255, 0.0374);
+  backdrop-filter: blur(12.5px);
+  -webkit-backdrop-filter: blur(12.5px);
+  background: transparent;
+  border: 1px solid #818181;
 }
 
 @media screen and (min-width: 1099px) {
   .Card {
     width: 88%;
     margin: 1vw 0 0 6%;
-    padding: 1vw 0;
+    padding: 0.5vw 0;
   }
 
   .Card--UndoneLow {
@@ -86,10 +121,21 @@
     background: rgba(20, 40, 50, 0.5);
   }
 
+  .Card--Editable {
+    margin: 2vw 0 2vw 6%;
+  }
+
+  .Card--Uneditable {
+    margin: 1vw 0 0 6%;
+  }
+
   .CardPriority {
     width: 0.7vw;
     height: 0.7vw;
-    margin: 0 0.7vw 0 4vw;
+    margin: 0 0.7vw 0 4.4vw;
+    right: auto;
+    bottom: auto;
+    left: -1%;
     border-radius: 50vw;
     display: flex;
     align-items: center;
@@ -98,7 +144,9 @@
   }
 
   .CardText {
-    width: 72%;
-    font-size: 16px;
+    width: 65%;
+    font-size: 1vw;
+    margin-left: 13%;
+    padding: 0.5vw 1vw;
   }
 }

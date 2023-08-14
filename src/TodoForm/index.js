@@ -38,7 +38,6 @@ function TodoForm() {
 
   return (
     <form className="TodoForm" onSubmit={onSubmit}>
-      
       <div className="TodoFormIconContainer">
         <img className="TodoFormIcon" src={icon} alt="FormIcon"></img>
       </div>
@@ -47,7 +46,7 @@ function TodoForm() {
         className="TodoForm-Text"
         value={newTaskValue}
         onChange={onChangeText}
-        maxLength={50}
+        maxLength={38}
         required
         placeholder="Take a nap.."
       />
@@ -94,9 +93,6 @@ function TodoForm() {
       <button type="submit" className="TodoForm-Button TodoForm-Button--Add">
         Add
       </button>
-      <div className="ArrowAnimationContainer">
-        <img src={arrow} alt="Arrow" className="TodoFormArrow1"></img>
-      </div>
     </form>
   );
 }
