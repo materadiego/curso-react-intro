@@ -10,7 +10,7 @@ function TodoProvider({ children }) {
     error,
   } = useLocalStorage("MyTasksApp_v1", []);
   const [searchValue, setSearchValue] = useState("");
-  const [createdValue, setCreatedValue] = useState("");
+  const [message, setMessage] = useState("");
   const [openModal, setOpenModal] = useState(false);
   const [emptyList, setEmptyList] = useState(true);
 
@@ -32,6 +32,10 @@ function TodoProvider({ children }) {
       created = true;
     }
     return created;
+  };
+
+  const returnMessage = (event) => {
+    event ? console.log("Success") : console.log("Already created");
   };
 
   const addTask = (text, priority, priorityNumber) => {
@@ -89,6 +93,7 @@ function TodoProvider({ children }) {
         loading,
         error,
         createdTask,
+        returnMessage,
         completedTasks,
         totalTasks,
         searchValue,

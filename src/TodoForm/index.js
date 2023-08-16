@@ -7,7 +7,7 @@ import arrow from "./arrow-right.svg";
 import "./TodoForm.css";
 
 function TodoForm() {
-  const { addTask, setOpenModal } = useContext(TodoContext);
+  const { addTask, setOpenModal, createdTask } = useContext(TodoContext);
 
   const [newTaskValue, setNewTaskValue] = useState("");
   const [newTaskPriority, setNewTaskPriority] = useState("High");
@@ -15,13 +15,22 @@ function TodoForm() {
 
   const onSubmit = (event) => {
     event.preventDefault();
-    addTask(newTaskValue, newTaskPriority, newTaskPriorityNumber);
-    setOpenModal(false);
-    setNewTaskValue("");
+    if (createdTask(newTaskValue)) {
+      console.log("Already Created");
+    } else {
+      addTask(newTaskValue, newTaskPriority, newTaskPriorityNumber);
+      setOpenModal(false);
+      setNewTaskValue("");
+    }
   };
 
   const onChangeText = (event) => {
     setNewTaskValue(event.target.value);
+    if (createdTask(event.target.value)) {
+      console.log("Already Created");
+    } else {
+      console.log("Not Created");
+    }
   };
 
   const onChangePriority = (event) => {

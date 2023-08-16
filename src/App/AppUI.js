@@ -16,6 +16,7 @@ import { TodoForm } from "../TodoForm";
 function AppUI() {
   const {
     loading,
+    returnMessage,
     error,
     createdTask,
     emptyList,
@@ -42,6 +43,7 @@ function AppUI() {
         {!loading && emptyList && <TodosEmpty />}
         {searchedTasks.map((todo) => (
           <TodoItem
+            returnMessage={returnMessage}
             onComplete={() => completeTask(todo.text)}
             onDelete={() => deleteTask(todo.text)}
             onEdit={editTask}

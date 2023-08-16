@@ -2,13 +2,12 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-top: 10vw;
 }
 
 .TodoFormIconContainer {
-  width: 30vw;
-  height: 30vw;
-  margin: 5vw 0;
+  width: 20vw;
+  height: 20vw;
+  margin: 0 0 5vw;
   border-radius: 50vw;
   display: flex;
   justify-content: center;

@@ -2,11 +2,11 @@ import React from "react";
 import "./TodosEdition.css";
 import icon from "./submit.svg";
 
-function TodosSubmitEdition({ sumbitEdit, closeEdit, onEdit }) {
+function TodosSubmitEdition({ submitEdit, closeEdit, onEdit }) {
   return (
     <span
       className={`EditionButtons EditionButtons--Submit`}
-      onClick={sumbitEdit}
+      onClick={submitEdit}
     >
       <img
         className="EditionButtons-ImageSubmit"

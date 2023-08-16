@@ -28,14 +28,23 @@ function TodoItem(props) {
     console.log("close edition");
   };
 
-  const sumbitEdit = () => {
+  const submitEdit = () => {
     //  validar que texto no exista
     if (props.createdTask(newTaskName)) {
+      props.returnMessage(false);
       console.log("Already Created");
     } else {
       setEditable(false);
       console.log("submit edition");
+      props.returnMessage(true);
+
       props.onEdit(props.text, newTaskName);
+    }
+  };
+
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter") {
+      submitEdit();
     }
   };
 
@@ -50,7 +59,7 @@ function TodoItem(props) {
       {!editable && <TodosEditButton edit={edit} />}
       {editable && <TodosCloseEdition closeEdit={closeEdit} />}
 
-      {editable && <TodosSubmitEdition sumbitEdit={sumbitEdit} />}
+      {editable && <TodosSubmitEdition sumbitEdit={submitEdit} />}
 
       {!editable && (
         <CompleteIcon
@@ -64,6 +73,7 @@ function TodoItem(props) {
       )}
       {editable ? (
         <input
+          onKeyDown={handleKeyDown}
           disabled={!editable}
           maxLength={38}
           value={newTaskName}
