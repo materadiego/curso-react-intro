@@ -24,6 +24,10 @@
     rgb(24, 19, 61) 80%
   );
   overflow: hidden;
+  background-image: url(../images/bg-bluewaves2.jpg);
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .background span {

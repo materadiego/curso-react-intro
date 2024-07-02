@@ -1,14 +1,10 @@
-import React, { useContext } from "react";
-import { TodoContext } from "../TodoContext";
+import React from "react";
 import { useState } from "react";
 import icon from "./TodoFormIcon.svg";
-import arrow from "./arrow-right.svg";
 
 import "./TodoForm.css";
 
-function TodoForm() {
-  const { addTask, setOpenModal, createdTask } = useContext(TodoContext);
-
+function TodoForm({ addTask, setOpenModal, createdTask }) {
   const [newTaskValue, setNewTaskValue] = useState("");
   const [newTaskPriority, setNewTaskPriority] = useState("High");
   const [newTaskPriorityNumber, setNewTaskPriorityNumber] = useState(1);

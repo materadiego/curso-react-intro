@@ -2,15 +2,21 @@
   width: auto;
   height: calc(100vh);
   bottom: 0;
-  background: rgb(101, 31, 158);
-  background: linear-gradient(130deg, rgb(77, 41, 106) 8%, rgb(29, 22, 77) 55%);
+  background: rgb(4, 20, 25);
+  background: linear-gradient(
+    315deg,
+    rgba(4, 20, 25, 0.5) 0%,
+    rgba(0, 55, 75, 0.5) 15%,
+    rgba(0, 81, 103, 0.5) 50%,
+    rgba(0, 55, 75, 0.5) 85%,
+    rgba(4, 20, 25, 0.5) 100%
+  );
   position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
   backdrop-filter: blur(12.5px);
   -webkit-backdrop-filter: blur(12.5px);
-
   z-index: 3;
   transition: 0.8s;
   will-change: transform;
@@ -27,12 +33,14 @@
 @media screen and (min-width: 1099px) {
   .ModalBg {
     width: 30%;
-    height: 32vw;
+    height: 28vw;
     bottom: auto;
-    top: 5vw;
+    top: 8.5vw;
     left: 60%;
-    padding: 2vw 0 0;
+    padding: 1vw 0;
     border: none;
+    border: 2px solid rgb(0, 72, 90);
+
     border-radius: 8px;
     /* background: rgba(38, 30, 103, 1); */
     box-shadow: 0 2px 30px 7px rgba(0, 0, 0, 0.4),

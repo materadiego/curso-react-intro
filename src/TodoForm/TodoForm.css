@@ -11,7 +11,7 @@
   border-radius: 50vw;
   display: flex;
   justify-content: center;
-  border: 2px solid #00d5ff;
+  border: 2px solid #00697e;
   box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
 }
 
@@ -40,7 +40,7 @@
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(12.5px);
   -webkit-backdrop-filter: blur(12.5px);
-  border: 1px solid #ffffff;
+  border: 2px solid #8a8d8d;
   color: #ffffff;
 }
 
@@ -152,6 +152,7 @@
   .TodoForm-PriorityContainer {
     width: 100%;
     margin: 0 0 2vw;
+    justify-content: space-between;
   }
 
   .TodoForm-PriorityLabel {
@@ -168,7 +169,7 @@
   .TodoForm-Button {
     width: 50%;
     height: 3vw;
-    margin: 0 0.5vw;
+    margin: 0;
     font-size: 1.3vw;
     cursor: pointer;
     transition: 0.3s;
@@ -177,13 +178,13 @@
 
   .TodoForm-Button--Add {
     margin-left: auto;
-    background: #0a86af;
-    border: 2px solid rgb(10, 134, 175);
+    background: #147899;
+    border: 2px solid rgb(20, 120, 153);
   }
 
   .TodoForm-Button--Add:hover {
-    background: #147899;
-    border: 2px solid rgb(20, 120, 153);
+    background: #0a86af;
+    border: 2px solid rgb(10, 134, 175);
   }
 
   .TodoForm-Button--Back {

@@ -1,18 +1,15 @@
-import React, { useContext } from "react";
+import React from "react";
 import Icon1 from "./HeroIcon.png";
 import "./TodoCounter.css";
-import { TodoContext } from "../TodoContext";
 
-function TodoCounter() {
-  const { completedTasks, totalTasks } = useContext(TodoContext);
-
+function TodoCounter({ completedTasks, totalTasks, loading }) {
   return (
-    <section className="TodoCounterContainer">
+    <section className={`TodoCounterContainer `}>
       <h1>
         {" "}
         <img src={Icon1} alt=""></img>MyTasks
       </h1>
-      <h2>
+      <h2 className={`TodoCounter ${!!loading && "TodoCounter--Loading"}`}>
         Completed tasks:{" "}
         <span>
           {completedTasks}/{totalTasks}

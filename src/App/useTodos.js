@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useLocalStorage } from "./useLocalStorage";
-const TodoContext = React.createContext();
 
-function TodoProvider({ children }) {
+function useTodos() {
   const {
     item: tasks,
     saveItem: saveTasks,
+    sincronizeItem: sincronizeTask,
     loading,
     error,
   } = useLocalStorage("MyTasksApp_v1", []);
@@ -87,30 +87,25 @@ function TodoProvider({ children }) {
       setEmptyList(false);
     }
   }, [tasks.length]);
-  return (
-    <TodoContext.Provider
-      value={{
-        loading,
-        error,
-        createdTask,
-        returnMessage,
-        completedTasks,
-        totalTasks,
-        searchValue,
-        setSearchValue,
-        emptyList,
-        searchedTasks,
-        completeTask,
-        deleteTask,
-        editTask,
-        openModal,
-        setOpenModal,
-        addTask,
-      }}
-    >
-      {children}
-    </TodoContext.Provider>
-  );
+  return {
+    loading,
+    error,
+    createdTask,
+    returnMessage,
+    completedTasks,
+    totalTasks,
+    searchValue,
+    setSearchValue,
+    emptyList,
+    searchedTasks,
+    completeTask,
+    deleteTask,
+    editTask,
+    openModal,
+    setOpenModal,
+    addTask,
+    sincronizeTask,
+  };
 }
 
-export { TodoContext, TodoProvider };
+export { useTodos };

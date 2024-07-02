@@ -1,7 +1,15 @@
-.TodoList {
+.TodoListContainer {
   position: relative;
   z-index: 2;
   width: 85%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.TodoList {
+  position: relative;
+  z-index: 2;
+  width: 100%;
   margin: 0 auto;
   list-style: none;
   padding: 0;
@@ -9,14 +17,14 @@
 }
 
 @media screen and (min-width: 1099px) {
-  .TodoList {
+  .TodoListContainer {
     width: 40%;
     margin: 0 0 0 7.5%;
     height: calc(100vh - 17vw);
     overflow: auto;
   }
 
-  .TodoList::-webkit-scrollbar {
+  .TodoListContainer::-webkit-scrollbar {
     width: 15px;
     border-radius: 50vw;
     background: rgba(255, 255, 255, 0.15);
@@ -24,7 +32,7 @@
     -webkit-backdrop-filter: blur(12.5px);
   }
 
-  .TodoList::-webkit-scrollbar-thumb {
+  .TodoListContainer::-webkit-scrollbar-thumb {
     background-color: #228eb3;
 
     border-radius: 50vw;
