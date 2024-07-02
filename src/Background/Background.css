@@ -25,7 +25,7 @@
   );
   overflow: hidden;
   background-image: url(../images/bg-bluewaves2.jpg);
-  background-size: 100%;
+  background-size: 350%;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -220,6 +220,10 @@
 }
 
 @media screen and (min-width: 1099px) {
+  .background {
+    background-size: 100%;
+  }
+
   .background span {
     width: 3vmin;
     height: 3vmin;
