@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/curso-react-intro/static/css/main.89d461c0.css",
+    "main.css": "/curso-react-intro/static/css/main.b3eb4e80.css",
     "main.js": "/curso-react-intro/static/js/main.a478a480.js",
     "static/media/bg-bluewaves2.jpg": "/curso-react-intro/static/media/bg-bluewaves2.4118b2f969509bb5df7a.jpg",
     "static/media/edit.svg": "/curso-react-intro/static/media/edit.d0f6187fde2e33f65d2fc52de9fd4fcb.svg",
@@ -10,11 +10,11 @@
     "static/media/close.svg": "/curso-react-intro/static/media/close.d095d33e8db71fd5fced10cea7deb7f6.svg",
     "static/media/add.svg": "/curso-react-intro/static/media/add.b170589bf6db2b47af53588fcb9f182e.svg",
     "static/media/check.svg": "/curso-react-intro/static/media/check.f82ae9878f4ddeefe818331284b63f0f.svg",
-    "main.89d461c0.css.map": "/curso-react-intro/static/css/main.89d461c0.css.map",
+    "main.b3eb4e80.css.map": "/curso-react-intro/static/css/main.b3eb4e80.css.map",
     "main.a478a480.js.map": "/curso-react-intro/static/js/main.a478a480.js.map"
   },
   "entrypoints": [
-    "static/css/main.89d461c0.css",
+    "static/css/main.b3eb4e80.css",
     "static/js/main.a478a480.js"
   ]
 }
